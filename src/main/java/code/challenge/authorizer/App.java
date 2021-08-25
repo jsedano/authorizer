@@ -36,12 +36,12 @@ public class App {
           output.add(parser.write(operation));
 
         } else {
-          for (String o : output) {
-            System.out.println(o);
-          }
           break;
         }
       }
+    }
+    for (String o : output) {
+      System.out.println(o);
     }
   }
 }
