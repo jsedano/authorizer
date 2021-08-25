@@ -5,6 +5,7 @@ import code.challenge.authorizer.model.Operation;
 import code.challenge.authorizer.model.Transaction;
 import code.challenge.authorizer.parser.Parser;
 import code.challenge.authorizer.processor.Processor;
+import code.challenge.authorizer.validation.Validator;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -16,7 +17,7 @@ import java.util.List;
 public class App {
 
   public static void main(String[] args) throws IOException {
-    Processor processor = new Processor();
+    Processor processor = new Processor(new Validator());
     Parser parser = new Parser();
     List<Transaction> transactions = new ArrayList<Transaction>();
     Account account = null;

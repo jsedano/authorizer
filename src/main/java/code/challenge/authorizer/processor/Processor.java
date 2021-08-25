@@ -11,8 +11,8 @@ public class Processor {
 
   private Validator validator;
 
-  public Processor() {
-    validator = new Validator();
+  public Processor(Validator validator) {
+    this.validator = validator;
   }
 
   public boolean process(Operation operation, List<Transaction> transactions, Account account) {
