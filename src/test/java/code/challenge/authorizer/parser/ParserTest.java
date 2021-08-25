@@ -19,9 +19,9 @@ public class ParserTest {
     Operation operation =
         parser.read("{\"account\": {\"active-card\": true, \"available-limit\": 100}}");
 
-    assertNotNull(operation.getAccountCreation());
-    assertTrue(operation.getAccountCreation().isActiveCard());
-    assertEquals(100, operation.getAccountCreation().getAvailableLimit());
+    assertNotNull(operation.getAccount());
+    assertTrue(operation.getAccount().isActiveCard());
+    assertEquals(100, operation.getAccount().getAvailableLimit());
   }
 
   @Test
@@ -33,10 +33,10 @@ public class ParserTest {
         parser.read(
             "{\"transaction\": {\"merchant\": \"Burger King\", \"amount\": 20, \"time\": \"2019-02-13T11:00:00.000Z\"}}");
 
-    assertNotNull(operation.getTransactionAuthorization());
-    assertEquals("Burger King", operation.getTransactionAuthorization().getMerchant());
-    assertEquals(20, operation.getTransactionAuthorization().getAmount());
-    assertEquals(date, operation.getTransactionAuthorization().getTime());
+    assertNotNull(operation.getTransaction());
+    assertEquals("Burger King", operation.getTransaction().getMerchant());
+    assertEquals(20, operation.getTransaction().getAmount());
+    assertEquals(date, operation.getTransaction().getTime());
   }
 
   @Test

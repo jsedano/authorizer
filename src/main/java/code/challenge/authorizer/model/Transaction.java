@@ -9,7 +9,7 @@ import lombok.NonNull;
 
 @Data
 @NoArgsConstructor
-public class TransactionAuthorization {
+public class Transaction {
   @JsonProperty("merchant")
   @NonNull
   private String merchant;

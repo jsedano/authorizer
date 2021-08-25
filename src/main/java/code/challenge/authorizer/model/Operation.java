@@ -8,10 +8,10 @@ import lombok.Data;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class Operation {
   @JsonProperty("account")
-  private AccountCreation accountCreation;
+  private Account account;
 
   @JsonProperty("transaction")
-  private TransactionAuthorization transactionAuthorization;
+  private Transaction transaction;
 
   @JsonProperty("violations")
   private String[] violations;

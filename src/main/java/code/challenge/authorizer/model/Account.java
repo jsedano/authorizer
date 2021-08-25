@@ -7,7 +7,7 @@ import lombok.NonNull;
 
 @Data
 @NoArgsConstructor
-public class AccountCreation {
+public class Account {
   @JsonProperty("active-card")
   @NonNull
   private boolean activeCard;
