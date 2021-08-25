@@ -19,7 +19,7 @@ mvn clean install
 
 #### run:
 
-java -jar target/authorizer-1.0-SNAPSHOT-jar-with-dependencies.jar < examples/multiple-logic-violation
+java -jar target/authorizer-1.0-SNAPSHOT-jar-with-dependencies.jar < examples/operations
 
 #### requirements:
 
@@ -27,3 +27,5 @@ java -jar target/authorizer-1.0-SNAPSHOT-jar-with-dependencies.jar < examples/mu
  - Java version: 11 or greater. 
 
 ### Additional notes
+
+examples directory contains the input from the challenge spec.pdf
